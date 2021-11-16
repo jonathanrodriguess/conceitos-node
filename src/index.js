@@ -60,7 +60,7 @@ app.post('/users', (request, response) => {
 
   users.push(user);
 
-  return response.status(201).json({ user });
+  return response.status(201).json(user);
 
 });
 
@@ -118,7 +118,7 @@ app.delete('/todos/:id', checksExistsUserAccount, checkExistsTodo, (request, res
 
   user.todos.splice(todo, 1);
 
-  return response.status(201).json();
+  return response.status(204).json();
 
 });
 
